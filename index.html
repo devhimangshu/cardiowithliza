@@ -3,14 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CardioWithLiza - Expert Cardiac Care & Medical Services</title>
-    <meta name="description" content="Professional medical and cardiac care services by Ms. Liza Ray Dakua, Medical Technologist at Jalpaiguri Medical College and Hospital.">
-    <meta name="keywords" content="Cardiac care, Medical Technologist, Liza Ray Dakua, Jalpaiguri Medical College, ECG, health consultation">
     
-    <!-- Tailwind CSS -->
+    <!-- Primary SEO Meta Tags -->
+    <title>CardioWithLiza - Home Cardiac Care & Medical Services</title>
+    <meta name="description" content="Professional home medical testing and cardiac care services by Ms. Liza Ray Dakua, Medical Technologist. Get accurate ECG, Holter, and PFT reports at your doorstep.">
+    <meta name="keywords" content="Home cardiac care, Medical Technologist, Liza Ray Dakua, Home ECG, health consultation, pathology home collection, Jalpaiguri medical services, Holter monitoring at home">
+    <meta name="author" content="Ms. Liza Ray Dakua">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#E50914">
+    <link rel="canonical" href="https://cardiowithliza.com/">
+
+    <!-- Open Graph / Facebook / Social Sharing Meta Tags -->
+    <meta property="og:site_name" content="CardioWithLiza">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cardiowithliza.com/">
+    <meta property="og:title" content="CardioWithLiza - Home Cardiac Care & Medical Services">
+    <meta property="og:description" content="Professional home medical testing and cardiac care services by Ms. Liza Ray Dakua. Get accurate ECG and pathology reports at your doorstep.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&q=80&w=1200">
+    
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://cardiowithliza.com/">
+    <meta property="twitter:title" content="CardioWithLiza - Home Cardiac Care">
+    <meta property="twitter:description" content="Professional home medical testing and cardiac care services. Get accurate reports at your doorstep.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&q=80&w=1200">
+
+    <!-- Custom Lightweight SVG Favicon (Will be animated via JS) -->
+    <link id="dynamic-favicon" rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E50914'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E">
+
+    <!-- Tailwind CSS Setup -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Tailwind Config for Custom Colors -->
     <script>
         tailwind.config = {
             theme: {
@@ -18,10 +39,34 @@
                     colors: {
                         brandRed: '#E50914',
                         brandBlack: '#0F0F0F',
-                        brandGrey: '#2B2B2B',
+                        brandGrey: '#1A1A1A',
+                        brandBorder: 'rgba(255,255,255,0.05)',
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                        mono: ['Courier New', 'monospace'],
+                    },
+                    animation: {
+                        'marquee': 'marquee 25s linear infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-fast': 'pulse 1.2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'scroll-x': 'scrollX 30s linear infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-15px)' },
+                        },
+                        scrollX: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(calc(-50% - 0.75rem))' },
+                        }
                     }
                 }
             }
@@ -29,511 +74,944 @@
     </script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- FontAwesome Icons -->
+    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Schema.org JSON-LD for Local Medical Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "CardioWithLiza",
+      "description": "Professional home medical testing and cardiac care services including ECG, Holter Monitoring, and Echo Cardiography.",
+      "image": "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&q=80&w=1000",
+      "telephone": "+91-8514869233",
+      "email": "contact@cardiowithliza.com",
+      "url": "https://cardiowithliza.com/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Jalpaiguri",
+        "addressRegion": "West Bengal",
+        "addressCountry": "IN"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Ms. Liza Ray Dakua",
+        "jobTitle": "Medical Technologist"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Jalpaiguri"
+      },
+      "medicalSpecialty": ["Cardiovascular", "Pathology"]
+    }
+    </script>
+
+    <!-- Custom Styling -->
     <style>
         body {
-            font-family: 'Inter', sans-serif;
-            background: #0F0F0F;
+            background-color: #0F0F0F;
             color: #ffffff;
             min-height: 100vh;
+            overflow-x: hidden;
         }
 
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0F0F0F;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #2B2B2B;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #E50914;
+        /* Modern Grid Background */
+        .bg-grid-pattern {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
         }
 
-        /* Glassmorphism utility */
-        .glass-card {
-            background: rgba(43, 43, 43, 0.4);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+        /* Hide scrollbar for internal scroll areas */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
 
-        /* Heartbeat Animation */
-        .heartbeat {
-            animation: pulse 1.5s infinite;
+        /* Custom Page Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0F0F0F; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #E50914; }
+
+        /* Glowing Border Card Effect */
+        .glow-card {
+            position: relative;
+            background: #1A1A1A;
+            border-radius: 1.25rem;
+            z-index: 1;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.3s ease;
         }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            14% { transform: scale(1.15); }
-            28% { transform: scale(1); }
-            42% { transform: scale(1.15); }
-            70% { transform: scale(1); }
+        .glow-card:hover {
+            border-color: rgba(229, 9, 20, 0.4);
+            box-shadow: 0 10px 30px rgba(229, 9, 20, 0.1);
+            transform: translateY(-3px);
         }
 
-        /* Input styling overrides */
-        input[type="date"]::-webkit-calendar-picker-indicator {
-            filter: invert(1);
+        /* Custom Date Picker CSS for Dark Mode */
+        .premium-date-input {
+            color-scheme: dark;
+            position: relative;
+        }
+        .premium-date-input::-webkit-calendar-picker-indicator {
+            opacity: 1;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="%23E50914" d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/></svg>');
             cursor: pointer;
+            padding: 4px;
+        }
+
+        /* Form Checkbox Styling */
+        .service-checkbox:checked + div {
+            border-color: #E50914;
+            background-color: rgba(229, 9, 20, 0.1);
+        }
+        .service-checkbox:checked + div .check-icon {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Monitor Screen Grid */
+        .monitor-grid {
+            background-size: 25px 25px;
+            background-image: 
+                linear-gradient(to right, rgba(0, 255, 0, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 255, 0, 0.05) 1px, transparent 1px);
+        }
+        
+        /* Realistic ECG Canvas Glow */
+        #ecgCanvas {
+            filter: drop-shadow(0 0 4px rgba(229, 9, 20, 0.8));
         }
     </style>
 </head>
-<body class="antialiased selection:bg-brandRed selection:text-white relative overflow-x-hidden">
+<body class="antialiased selection:bg-brandRed selection:text-white">
 
-    <!-- Background glow effects -->
-    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
-        <div class="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-brandRed rounded-full mix-blend-screen filter blur-[200px] opacity-10"></div>
-        <div class="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-brandRed rounded-full mix-blend-screen filter blur-[200px] opacity-10"></div>
+    <!-- Fixed Background Elements -->
+    <div class="fixed inset-0 pointer-events-none z-[-1]" aria-hidden="true">
+        <div class="absolute inset-0 bg-grid-pattern opacity-40"></div>
+        <div class="absolute top-[-10%] right-[-10%] w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-brandRed rounded-full mix-blend-screen filter blur-[150px] md:blur-[250px] opacity-20 animate-pulse-slow"></div>
+        <div class="absolute bottom-[-10%] left-[-10%] w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-brandRed rounded-full mix-blend-screen filter blur-[150px] md:blur-[250px] opacity-10"></div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-card border-b border-white/10 transition-all duration-300">
+    <!-- Navigation Header -->
+    <header class="fixed w-full z-50 bg-[#0F0F0F]/90 backdrop-blur-xl border-b border-brandBorder transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0 flex items-center gap-3">
-                    <i class="fa-solid fa-heart-pulse text-brandRed text-3xl heartbeat"></i>
-                    <span class="font-bold text-xl tracking-tight">CardioWith<span class="text-brandRed">Liza</span></span>
-                </div>
+            <div class="flex justify-between items-center h-16 md:h-20">
                 
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-gray-300 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider">Home</a>
-                    <a href="#about" class="text-gray-300 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider">About</a>
-                    <a href="#services" class="text-gray-300 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider">Services</a>
-                    <a href="#testimonials" class="text-gray-300 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider">Reviews</a>
-                    <a href="#booking" class="bg-brandRed hover:bg-red-700 text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-brandRed/30">Book Now</a>
-                </div>
+                <!-- Logo -->
+                <a href="#" aria-label="CardioWithLiza Home" class="flex items-center gap-2 md:gap-3 group">
+                    <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-brandRed/10 border border-brandRed/30 flex items-center justify-center group-hover:bg-brandRed transition-colors duration-300">
+                        <i class="fa-solid fa-heart-pulse text-brandRed group-hover:text-white text-sm md:text-base transition-colors" aria-hidden="true"></i>
+                    </div>
+                    <span class="font-display font-bold text-xl md:text-2xl tracking-tight">CardioWith<span class="text-brandRed">Liza</span></span>
+                </a>
+                
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-6 lg:space-x-8 bg-brandGrey/50 px-6 py-2.5 rounded-full border border-brandBorder" aria-label="Main Navigation">
+                    <a href="#home" class="text-xs lg:text-sm font-medium text-gray-400 hover:text-white transition-colors">Home</a>
+                    <a href="#about" class="text-xs lg:text-sm font-medium text-gray-400 hover:text-white transition-colors">About</a>
+                    <a href="#services" class="text-xs lg:text-sm font-medium text-gray-400 hover:text-white transition-colors">Services</a>
+                    <a href="#testimonials" class="text-xs lg:text-sm font-medium text-gray-400 hover:text-white transition-colors">Reviews</a>
+                </nav>
 
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
-                        <i class="fa-solid fa-bars text-2xl"></i>
+                <!-- Desktop CTA -->
+                <div class="hidden md:flex items-center">
+                    <button type="button" aria-label="Open Booking Form" class="group relative px-5 py-2 text-sm font-bold text-white rounded-full bg-brandRed overflow-hidden btn-book-now">
+                        <span class="relative z-10">Book Home Test</span>
+                        <div class="absolute inset-0 h-full w-0 bg-white/20 transition-all duration-300 ease-out group-hover:w-full z-0"></div>
                     </button>
                 </div>
+
+                <!-- Mobile Menu Toggle Button -->
+                <button type="button" id="mobile-menu-btn" aria-label="Toggle Mobile Menu" aria-expanded="false" class="md:hidden text-gray-300 hover:text-white p-2">
+                    <i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
+                </button>
             </div>
         </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden glass-card border-t border-white/10">
-            <div class="px-4 pt-2 pb-6 space-y-2 text-center">
-                <a href="#home" class="block px-3 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md">Home</a>
-                <a href="#about" class="block px-3 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md">About</a>
-                <a href="#services" class="block px-3 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md">Services</a>
-                <a href="#testimonials" class="block px-3 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md">Reviews</a>
-                <a href="#booking" class="block px-3 py-3 mt-4 text-base font-bold text-white bg-brandRed rounded-md shadow-lg">Book Now</a>
+        <!-- Mobile Navigation Menu -->
+        <nav id="mobile-menu" aria-label="Mobile Navigation" class="hidden md:hidden bg-[#0F0F0F] border-b border-brandBorder absolute w-full shadow-2xl">
+            <div class="px-4 pt-2 pb-6 space-y-1 text-center">
+                <a href="#home" class="block px-3 py-3 text-sm font-medium text-gray-400 hover:text-white border-b border-brandBorder">Home</a>
+                <a href="#about" class="block px-3 py-3 text-sm font-medium text-gray-400 hover:text-white border-b border-brandBorder">About</a>
+                <a href="#services" class="block px-3 py-3 text-sm font-medium text-gray-400 hover:text-white border-b border-brandBorder">Services</a>
+                <a href="#testimonials" class="block px-3 py-3 text-sm font-medium text-gray-400 hover:text-white">Reviews</a>
+                <button type="button" aria-label="Open Booking Form" class="block w-full px-3 py-3 mt-4 text-sm font-bold text-white bg-brandRed rounded-full mx-auto max-w-[90%] btn-book-now">Book Home Test</button>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div class="space-y-8 order-2 lg:order-1 text-center lg:text-left">
-                <div class="inline-flex items-center px-4 py-2 rounded-full border border-brandRed/30 bg-brandRed/10 text-white font-medium text-sm mb-2 shadow-[0_0_15px_rgba(229,9,20,0.2)]">
-                    <span class="w-2 h-2 rounded-full bg-brandRed mr-3 heartbeat"></span> Reliable Medical Support
-                </div>
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight">
-                    Accurate Care <br /> For Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandRed to-red-500">Heart</span>
-                </h1>
-                <p class="text-gray-400 text-lg md:text-xl max-w-lg mx-auto lg:mx-0 leading-relaxed">
-                    Professional cardiac assessment and medical testing by Ms. Liza Ray Dakua. Get precise reports and expert care at Jalpaiguri Medical College.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-                    <a href="#booking" class="bg-brandRed hover:bg-red-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 text-center shadow-lg shadow-brandRed/20 flex items-center justify-center gap-2">
-                        <i class="fa-regular fa-calendar-check"></i> Schedule Visit
-                    </a>
-                    <a href="#services" class="glass-card hover:bg-white/10 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 text-center flex items-center justify-center gap-2">
-                        View Services <i class="fa-solid fa-arrow-right text-sm"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="order-1 lg:order-2 relative w-full h-[400px] md:h-[500px] rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl group">
-                <img src="https://images.unsplash.com/photo-1551076805-e18690c5e561?auto=format&fit=crop&q=80&w=1000" alt="Medical professional in lab" class="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-brandBlack via-brandBlack/40 to-transparent"></div>
+    <main id="main-content">
+        <!-- Hero Section with Realistic Medical Monitor -->
+        <section id="home" aria-labelledby="hero-heading" class="pt-24 pb-12 md:pt-32 md:pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-screen flex items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center w-full">
                 
-                <!-- Floating Info Badge -->
-                <div class="absolute bottom-8 left-8 right-8 glass-card p-5 rounded-2xl border border-white/10 flex items-center justify-between">
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-brandRed/20 flex items-center justify-center">
-                            <i class="fa-solid fa-microscope text-brandRed text-xl"></i>
+                <!-- Hero Text Content -->
+                <div class="space-y-6 md:space-y-8 z-10 order-2 lg:order-1 text-center lg:text-left mt-8 lg:mt-0">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-brandGrey border border-brandBorder mx-auto lg:mx-0">
+                        <span class="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-brandRed animate-pulse-fast" aria-hidden="true"></span>
+                        <span class="text-[10px] md:text-xs font-medium text-gray-300 uppercase tracking-widest">Home Service Available</span>
+                    </div>
+                    
+                    <h1 id="hero-heading" class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-bold leading-[1.1] tracking-tight">
+                        Accurate <br class="hidden sm:block">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Diagnostics</span><br>
+                        At Your <span class="text-brandRed italic pr-1">Home.</span>
+                    </h1>
+                    
+                    <p class="text-gray-400 text-sm md:text-base lg:text-lg max-w-lg mx-auto lg:mx-0 leading-relaxed">
+                        Expert cardiac assessment and precision lab testing by Ms. Liza Ray Dakua, safely delivered directly to your doorstep.
+                    </p>
+
+                    <!-- Compact Services Indicators -->
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-2 max-w-lg mx-auto lg:mx-0">
+                        <span class="px-3 py-1 bg-[#1A1A1A] border border-brandBorder rounded-md text-xs text-gray-300"><i class="fa-solid fa-house-medical text-brandRed mr-1" aria-hidden="true"></i> Home ECG</span>
+                        <span class="px-3 py-1 bg-[#1A1A1A] border border-brandBorder rounded-md text-xs text-gray-300"><i class="fa-solid fa-vial text-brandRed mr-1" aria-hidden="true"></i> Blood Collection</span>
+                        <span class="px-3 py-1 bg-[#1A1A1A] border border-brandBorder rounded-md text-xs text-gray-300"><i class="fa-solid fa-heart-circle-bolt text-brandRed mr-1" aria-hidden="true"></i> Holter</span>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-3 pt-2 justify-center lg:justify-start">
+                        <button type="button" aria-label="Open Booking Form" class="px-8 py-4 bg-white text-black text-sm md:text-base font-bold rounded-full hover:bg-gray-200 transition-colors flex items-center justify-center gap-3 w-full sm:w-auto btn-book-now shadow-lg shadow-white/10">
+                            Book Home Service <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Hero Visual Content: Realistic Medical Monitor TV -->
+                <div class="relative w-full order-1 lg:order-2 flex items-center justify-center py-4" aria-hidden="true">
+                    
+                    <!-- Monitor Case Frame -->
+                    <div class="w-full max-w-[500px] aspect-video sm:aspect-[4/3] bg-[#1A1A1A] rounded-3xl border border-[#333] shadow-[0_20px_50px_rgba(0,0,0,0.6),inset_0_0_0_4px_#0F0F0F] flex flex-col p-2 sm:p-3 relative z-10 animate-float transform rotate-1 hover:rotate-0 transition-transform duration-500">
+                        
+                        <!-- Top Status LED Bar -->
+                        <div class="flex justify-between items-center px-3 pb-2 pt-1 border-b border-brandBorder">
+                            <div class="flex gap-2">
+                                <div class="w-2.5 h-2.5 rounded-full bg-red-500 shadow-[0_0_8px_#ef4444] animate-pulse-fast"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/30"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-green-500/30"></div>
+                            </div>
+                            <span class="text-[9px] sm:text-[10px] text-gray-500 font-mono tracking-[0.2em] uppercase">Sys_Active_V3.0</span>
                         </div>
+
+                        <!-- Monitor Screen Interface -->
+                        <div class="flex-1 bg-[#050505] rounded-xl relative overflow-hidden monitor-grid border border-white/5 shadow-[inset_0_0_40px_rgba(0,0,0,0.8)]">
+                            
+                            <!-- Top Left Data Indicators -->
+                            <div class="absolute top-3 left-4">
+                                <p class="text-green-500 font-mono text-[10px] sm:text-xs font-bold">ID: PAT-8492</p>
+                                <p class="text-green-500/70 font-mono text-[9px] sm:text-[10px]">LEAD II - 25mm/s</p>
+                            </div>
+
+                            <!-- Right Data Column (Dynamic Numbers) -->
+                            <div class="absolute top-4 right-4 text-right flex flex-col gap-4">
+                                <div>
+                                    <p class="text-brandRed font-mono text-xs sm:text-sm font-bold flex justify-end items-center gap-1.5 mb-1">
+                                        <i class="fa-solid fa-heart animate-pulse-fast"></i> HR
+                                    </p>
+                                    <p id="monitor-hr" class="text-brandRed font-mono text-3xl sm:text-5xl font-bold leading-none tracking-tighter drop-shadow-[0_0_8px_rgba(229,9,20,0.5)] transition-all">72</p>
+                                </div>
+                                
+                                <div>
+                                    <p class="text-cyan-400 font-mono text-[10px] sm:text-xs font-bold mb-0.5">SpO2 %</p>
+                                    <p id="monitor-spo2" class="text-cyan-400 font-mono text-xl sm:text-2xl font-bold leading-none drop-shadow-[0_0_5px_rgba(34,211,238,0.5)] transition-all">98</p>
+                                </div>
+                            </div>
+
+                            <!-- Bottom Left Data -->
+                            <div class="absolute bottom-3 left-4">
+                                <p class="text-yellow-400 font-mono text-[10px] sm:text-xs font-bold mb-0.5">NIBP mmHg</p>
+                                <p id="monitor-nibp" class="text-yellow-400 font-mono text-lg sm:text-xl font-bold leading-none transition-all">120/80</p>
+                            </div>
+
+                            <!-- Canvas Element for drawing live ECG -->
+                            <div class="absolute top-1/2 -translate-y-1/2 left-0 h-32 sm:h-40 w-full overflow-hidden">
+                                <canvas id="ecgCanvas" class="w-full h-full block"></canvas>
+                            </div>
+
+                            <!-- CRT Screen Scan Line Overlay -->
+                            <div class="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_0%,rgba(0,255,0,0.05)_10%,transparent_100%)] bg-[length:100%_4px] opacity-50 pointer-events-none"></div>
+                        </div>
+                    </div>
+
+                    <!-- Abstract background glow behind monitor -->
+                    <div class="absolute w-full h-full bg-brandRed rounded-full filter blur-[100px] opacity-10 -z-10 pointer-events-none"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Infinite Scrolling Text Marquee -->
+        <div class="w-full bg-brandRed py-2.5 md:py-4 overflow-hidden border-y border-white/20 transform -rotate-1 my-6 md:my-10" aria-hidden="true">
+            <div class="whitespace-nowrap flex w-[200%] animate-marquee items-center text-black font-display font-bold text-sm md:text-xl uppercase tracking-widest">
+                <span>• HOME SAMPLE COLLECTION • ECG TESTING AT HOME • HOLTER MONITORING • ACCURATE DIAGNOSTICS • SECURE REPORTS</span>
+                <span class="ml-2 md:ml-4">• HOME SAMPLE COLLECTION • ECG TESTING AT HOME • HOLTER MONITORING • ACCURATE DIAGNOSTICS • SECURE REPORTS</span>
+            </div>
+        </div>
+
+        <!-- About The Expert Section -->
+        <section id="about" aria-labelledby="about-heading" class="py-12 md:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="mb-8 md:mb-12">
+                <h2 class="text-brandRed text-xs md:text-sm font-bold tracking-widest uppercase mb-1 md:mb-2">The Expert</h2>
+                <h3 id="about-heading" class="font-display text-3xl md:text-4xl lg:text-5xl font-bold">About <span class="text-gray-500">CardioWithLiza</span></h3>
+            </div>
+
+            <!-- CSS Grid Bento Box Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 md:auto-rows-[250px]">
+                
+                <!-- Main Profile Focus Box -->
+                <div class="md:col-span-2 md:row-span-2 glow-card group relative p-6 md:p-8 flex flex-col justify-end min-h-[250px] md:min-h-0 bg-brandGrey border border-brandBorder overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&q=80&w=1000" alt="Medical Technologist conducting lab work" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] via-[#1A1A1A]/60 to-transparent z-10 pointer-events-none"></div>
+                    <div class="relative z-20">
+                        <h4 class="font-display text-2xl md:text-3xl font-bold text-white mb-2">Ms. Liza Ray Dakua</h4>
+                        <p class="text-gray-300 text-xs md:text-sm leading-relaxed max-w-md">Dedicated to delivering precise medical tests safely to your home, helping doctors make correct health decisions.</p>
+                    </div>
+                </div>
+
+                <!-- Education Box -->
+                <div class="md:col-span-2 glow-card relative overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=800" alt="Medical College view" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-30 group-hover:scale-105 transition-all duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] to-[#1A1A1A]/80 z-10 pointer-events-none"></div>
+                    <div class="relative z-20 p-6 md:p-8 flex flex-col justify-center h-full">
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#0F0F0F] border border-brandBorder flex items-center justify-center text-brandRed mb-4 md:mb-6 shadow-lg">
+                            <i class="fa-solid fa-graduation-cap text-lg md:text-xl" aria-hidden="true"></i>
+                        </div>
+                        <h4 class="font-bold text-lg md:text-xl text-white mb-2">Educational Background</h4>
+                        <p class="text-gray-300 text-xs md:text-sm leading-relaxed">
+                            Alumni of College of Medicine and JNM Hospital, Kalyani, Nadia. Trained extensively in clinical pathology and modern diagnostic methods.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Current Role Box -->
+                <div class="md:col-span-1 glow-card relative overflow-hidden bg-brandRed/10 border-brandRed/20 min-h-[150px] md:min-h-0 group">
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=600" alt="Hospital hallway background" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-30 group-hover:scale-105 transition-all duration-700">
+                    <div class="absolute inset-0 bg-brandBlack/70 z-10 pointer-events-none"></div>
+                    <div class="relative z-20 p-5 md:p-6 flex flex-col justify-between h-full">
+                        <i class="fa-solid fa-hospital text-2xl md:text-3xl text-brandRed" aria-hidden="true"></i>
                         <div>
-                            <p class="text-white font-bold text-lg">Lab Accuracy</p>
-                            <p class="text-gray-400 text-sm">100% Verified Reports</p>
+                            <p class="text-[10px] md:text-xs text-brandRed font-bold uppercase tracking-wider mb-1">Current Role</p>
+                            <h4 class="font-bold text-base md:text-lg text-white leading-tight">Medical Technologist</h4>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-24 bg-brandGrey/30 border-y border-white/5 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <!-- Image Side -->
-                <div class="lg:col-span-5 relative">
-                    <div class="w-full h-[500px] rounded-3xl overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&q=80&w=1000" alt="Medical diagnostics" class="w-full h-full object-cover opacity-80">
-                        <div class="absolute inset-0 bg-brandRed/10 mix-blend-multiply"></div>
-                    </div>
-                    <!-- Decorative element -->
-                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-brandBlack rounded-2xl border border-white/10 flex items-center justify-center shadow-xl">
-                        <i class="fa-solid fa-user-doctor text-5xl text-brandRed"></i>
+                <!-- Service Location Box -->
+                <div class="md:col-span-1 glow-card relative overflow-hidden group min-h-[150px] md:min-h-0 border border-brandBorder">
+                    <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&q=80&w=600" alt="Medical facility map location" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-30 group-hover:scale-105 transition-all duration-700">
+                    <div class="absolute inset-0 bg-[#1A1A1A]/80 z-10 pointer-events-none"></div>
+                    <div class="relative z-20 p-5 md:p-6 flex flex-col justify-between h-full">
+                        <i class="fa-solid fa-house-medical text-2xl md:text-3xl text-gray-400 relative z-10" aria-hidden="true"></i>
+                        <div class="relative z-10">
+                            <p class="text-[10px] md:text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Service Area</p>
+                            <h4 class="font-bold text-base md:text-lg text-white leading-tight">Home Testing</h4>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Content Side -->
-                <div class="lg:col-span-7 space-y-8">
-                    <div>
-                        <h2 class="text-brandRed font-bold tracking-wider uppercase text-sm mb-2">About The Expert</h2>
-                        <h3 class="text-3xl md:text-5xl font-bold mb-6 text-white">Meet <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">Ms. Liza Ray Dakua</span></h3>
-                        <p class="text-gray-400 text-lg leading-relaxed">
-                            With solid training from the College of Medicine and JNM Hospital in Kalyani, I focus on delivering precise medical tests. My daily work at Jalpaiguri Medical College helps doctors make correct health decisions for their patients.
+            </div>
+        </section>
+
+        <!-- Our Medical Services Section -->
+        <section id="services" aria-labelledby="services-heading" class="py-12 md:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-12 gap-4 md:gap-6">
+                <div>
+                    <h2 class="text-brandRed text-xs md:text-sm font-bold tracking-widest uppercase mb-1 md:mb-2">Doorstep Facilities</h2>
+                    <h3 id="services-heading" class="font-display text-3xl md:text-4xl lg:text-5xl font-bold">Home <span class="text-gray-500">Services</span></h3>
+                </div>
+                <p class="text-gray-400 max-w-md text-xs md:text-sm">We provide high-standard medical testing using portable, modern equipment delivered straight to your home.</p>
+            </div>
+
+            <!-- Services Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                
+                <!-- Service: ECG -->
+                <article class="glow-card group flex flex-col justify-between relative min-h-[220px] md:min-h-[280px] overflow-hidden border border-brandBorder cursor-pointer btn-book-now">
+                    <img src="https://images.unsplash.com/photo-1527613426441-4da17471b66d?auto=format&fit=crop&q=80&w=800" alt="ECG monitor testing" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0F0F0F] via-[#0F0F0F]/70 to-[#0F0F0F]/20 z-10 pointer-events-none transition-colors duration-500"></div>
+                    
+                    <div class="relative z-20 p-6 md:p-8 flex flex-col h-full">
+                        <span class="absolute top-4 right-5 md:right-6 text-5xl md:text-7xl font-display font-black text-white/10 pointer-events-none group-hover:text-brandRed/20 transition-colors">01</span>
+                        <div class="w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-[#111] border border-brandBorder flex items-center justify-center group-hover:bg-brandRed group-hover:border-brandRed transition-all duration-300 mb-4 md:mb-0 shadow-lg">
+                            <i class="fa-solid fa-wave-square text-lg md:text-2xl text-white" aria-hidden="true"></i>
+                        </div>
+                        <div class="mt-auto">
+                            <h4 class="font-display text-xl md:text-2xl font-bold text-white mb-2 md:mb-3">Home ECG</h4>
+                            <p class="text-gray-300 text-xs md:text-sm leading-relaxed drop-shadow-md">Portable, detailed electrocardiogram testing performed securely at your home.</p>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 h-1 bg-brandRed w-0 group-hover:w-full transition-all duration-500 z-30"></div>
+                </article>
+
+                <!-- Service: Holter -->
+                <article class="glow-card group flex flex-col justify-between relative min-h-[220px] md:min-h-[280px] overflow-hidden border border-brandBorder md:mt-6 cursor-pointer btn-book-now">
+                    <img src="https://images.unsplash.com/photo-1583324113626-70df0f4deaab?auto=format&fit=crop&q=80&w=800" alt="Holter monitor wearable" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0F0F0F] via-[#0F0F0F]/70 to-[#0F0F0F]/20 z-10 pointer-events-none transition-colors duration-500"></div>
+                    
+                    <div class="relative z-20 p-6 md:p-8 flex flex-col h-full">
+                        <span class="absolute top-4 right-5 md:right-6 text-5xl md:text-7xl font-display font-black text-white/10 pointer-events-none group-hover:text-brandRed/20 transition-colors">02</span>
+                        <div class="w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-[#111] border border-brandBorder flex items-center justify-center group-hover:bg-brandRed group-hover:border-brandRed transition-all duration-300 mb-4 md:mb-0 shadow-lg">
+                            <i class="fa-solid fa-heart-circle-bolt text-lg md:text-2xl text-white" aria-hidden="true"></i>
+                        </div>
+                        <div class="mt-auto">
+                            <h4 class="font-display text-xl md:text-2xl font-bold text-white mb-2 md:mb-3">Holter Setup</h4>
+                            <p class="text-gray-300 text-xs md:text-sm leading-relaxed drop-shadow-md">We visit your home to set up continuous heart monitoring tech for 24-hour tracking.</p>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 h-1 bg-brandRed w-0 group-hover:w-full transition-all duration-500 z-30"></div>
+                </article>
+
+                <!-- Service: Echo Cardiography -->
+                <article class="glow-card group flex flex-col justify-between relative min-h-[220px] md:min-h-[280px] overflow-hidden border border-brandBorder lg:mt-12 cursor-pointer btn-book-now">
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800" alt="Ultrasound monitor display" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0F0F0F] via-[#0F0F0F]/70 to-[#0F0F0F]/20 z-10 pointer-events-none transition-colors duration-500"></div>
+
+                    <div class="relative z-20 p-6 md:p-8 flex flex-col h-full">
+                        <span class="absolute top-4 right-5 md:right-6 text-5xl md:text-7xl font-display font-black text-white/10 pointer-events-none group-hover:text-brandRed/20 transition-colors">03</span>
+                        <div class="w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-[#111] border border-brandBorder flex items-center justify-center group-hover:bg-brandRed group-hover:border-brandRed transition-all duration-300 mb-4 md:mb-0 shadow-lg">
+                            <i class="fa-solid fa-heart-pulse text-lg md:text-2xl text-white" aria-hidden="true"></i>
+                        </div>
+                        <div class="mt-auto">
+                            <h4 class="font-display text-xl md:text-2xl font-bold text-white mb-2 md:mb-3">Echo Cardiography</h4>
+                            <p class="text-gray-300 text-xs md:text-sm leading-relaxed drop-shadow-md">Detailed ultrasound of the heart providing moving pictures and structural info.</p>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 h-1 bg-brandRed w-0 group-hover:w-full transition-all duration-500 z-30"></div>
+                </article>
+
+                <!-- Service: T.M.T -->
+                <article class="glow-card group flex flex-col justify-between relative min-h-[220px] md:min-h-[280px] overflow-hidden border border-brandBorder cursor-pointer btn-book-now">
+                    <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&q=80&w=800" alt="Treadmill fitness test equipment" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0F0F0F] via-[#0F0F0F]/70 to-[#0F0F0F]/20 z-10 pointer-events-none transition-colors duration-500"></div>
+
+                    <div class="relative z-20 p-6 md:p-8 flex flex-col h-full">
+                        <span class="absolute top-4 right-5 md:right-6 text-5xl md:text-7xl font-display font-black text-white/10 pointer-events-none group-hover:text-brandRed/20 transition-colors">04</span>
+                        <div class="w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-[#111] border border-brandBorder flex items-center justify-center group-hover:bg-brandRed group-hover:border-brandRed transition-all duration-300 mb-4 md:mb-0 shadow-lg">
+                            <i class="fa-solid fa-person-running text-lg md:text-2xl text-white" aria-hidden="true"></i>
+                        </div>
+                        <div class="mt-auto">
+                            <h4 class="font-display text-xl md:text-2xl font-bold text-white mb-2 md:mb-3">T.M.T</h4>
+                            <p class="text-gray-300 text-xs md:text-sm leading-relaxed drop-shadow-md">Treadmill Test to measure your heart's ability to respond to external physical stress safely.</p>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 h-1 bg-brandRed w-0 group-hover:w-full transition-all duration-500 z-30"></div>
+                </article>
+
+                <!-- Service: PFT -->
+                <article class="glow-card group flex flex-col justify-between relative min-h-[220px] md:min-h-[280px] overflow-hidden border border-brandBorder md:mt-6 cursor-pointer btn-book-now">
+                    <img src="https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&q=80&w=800" alt="Lungs checkup respiratory test" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0F0F0F] via-[#0F0F0F]/70 to-[#0F0F0F]/20 z-10 pointer-events-none transition-colors duration-500"></div>
+
+                    <div class="relative z-20 p-6 md:p-8 flex flex-col h-full">
+                        <span class="absolute top-4 right-5 md:right-6 text-5xl md:text-7xl font-display font-black text-white/10 pointer-events-none group-hover:text-brandRed/20 transition-colors">05</span>
+                        <div class="w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-[#111] border border-brandBorder flex items-center justify-center group-hover:bg-brandRed group-hover:border-brandRed transition-all duration-300 mb-4 md:mb-0 shadow-lg">
+                            <i class="fa-solid fa-lungs text-lg md:text-2xl text-white" aria-hidden="true"></i>
+                        </div>
+                        <div class="mt-auto">
+                            <h4 class="font-display text-xl md:text-2xl font-bold text-white mb-2 md:mb-3">PFT</h4>
+                            <p class="text-gray-300 text-xs md:text-sm leading-relaxed drop-shadow-md">Pulmonary Function Tests to measure lung volume, capacity, rates of flow, and gas exchange.</p>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 h-1 bg-brandRed w-0 group-hover:w-full transition-all duration-500 z-30"></div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Testimonials Review Section (Infinite Loop) -->
+        <section id="testimonials" aria-labelledby="reviews-heading" class="py-12 md:py-20 bg-[#0a0a0a] border-y border-brandBorder overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 md:mb-12">
+                <h2 class="text-brandRed text-xs md:text-sm font-bold tracking-widest uppercase mb-1 md:mb-2">Feedback</h2>
+                <h3 id="reviews-heading" class="font-display text-3xl md:text-4xl font-bold">Patient <span class="text-gray-500">Reviews</span></h3>
+            </div>
+
+            <!-- Auto-scrolling wrapper -->
+            <!-- FIX: Added padding (py-6) and negative margin (-my-6) so the shadows and hover transform do not clip -->
+            <div class="relative w-full group overflow-hidden py-6 -my-6">
+                <div class="flex gap-4 md:gap-6 w-max animate-scroll-x group-hover:[animation-play-state:paused] px-4 md:px-0">
+                    
+                    <div class="shrink-0 w-[85vw] md:w-[380px] glow-card p-6 md:p-8 bg-[#151515]">
+                        <div class="flex items-center justify-between mb-4 md:mb-6">
+                            <div class="flex items-center gap-3 md:gap-4">
+                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brandBlack flex items-center justify-center text-sm font-bold border border-brandBorder" aria-hidden="true">RK</div>
+                                <div>
+                                    <h4 class="font-bold text-white text-xs md:text-sm">Rajesh K.</h4>
+                                    <div class="flex text-brandRed text-[10px] md:text-xs mt-1" aria-label="5 stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-quote-right text-xl md:text-3xl text-brandBorder" aria-hidden="true"></i>
+                        </div>
+                        <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
+                            "Ms. Liza was very professional. My home ECG test was done quickly, and she explained the process clearly. Very comfortable service."
                         </p>
                     </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
-                        <div class="glass-card p-6 rounded-2xl border-l-4 border-l-brandRed hover:bg-white/5 transition-colors">
-                            <i class="fa-solid fa-hospital text-2xl text-brandRed mb-4"></i>
-                            <h4 class="font-bold text-white text-lg mb-2">Current Role</h4>
-                            <p class="text-sm text-gray-400 leading-relaxed">Medical Technologist at Jalpaiguri Medical College and Hospital. Handling critical tests accurately.</p>
-                        </div>
-                        
-                        <div class="glass-card p-6 rounded-2xl border-l-4 border-l-brandRed hover:bg-white/5 transition-colors">
-                            <i class="fa-solid fa-graduation-cap text-2xl text-brandRed mb-4"></i>
-                            <h4 class="font-bold text-white text-lg mb-2">Education</h4>
-                            <p class="text-sm text-gray-400 leading-relaxed">Alumni of College of Medicine and JNM Hospital, Nadia. Trained in advanced clinical pathology.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-            <h2 class="text-brandRed font-bold tracking-wider uppercase text-sm mb-2">What I Do</h2>
-            <h3 class="text-3xl md:text-5xl font-bold text-white mb-6">Professional Services</h3>
-            <p class="text-gray-400 max-w-2xl mx-auto text-lg">Comprehensive medical testing and consultation delivered with high standards and clear results.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Service 1 -->
-            <div class="relative group overflow-hidden rounded-3xl border border-white/10 h-[400px]">
-                <img src="https://images.unsplash.com/photo-1527613426441-4da17471b66d?auto=format&fit=crop&q=80&w=800" alt="ECG Testing" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-all duration-700 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-brandBlack via-brandBlack/80 to-transparent"></div>
-                
-                <div class="absolute bottom-0 left-0 p-8 w-full z-10 transform transition-transform duration-500">
-                    <div class="w-14 h-14 rounded-xl bg-brandRed/20 backdrop-blur-md flex items-center justify-center mb-6 border border-brandRed/30">
-                        <i class="fa-solid fa-wave-square text-2xl text-brandRed"></i>
-                    </div>
-                    <h4 class="text-2xl font-bold text-white mb-3">ECG Monitoring</h4>
-                    <p class="text-gray-400 leading-relaxed">Detailed electrocardiogram testing to check your heart rhythm and electrical activity accurately.</p>
-                </div>
-            </div>
-
-            <!-- Service 2 -->
-            <div class="relative group overflow-hidden rounded-3xl border border-white/10 h-[400px]">
-                <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&q=80&w=800" alt="Pathology Services" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-all duration-700 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-brandBlack via-brandBlack/80 to-transparent"></div>
-                
-                <div class="absolute bottom-0 left-0 p-8 w-full z-10 transform transition-transform duration-500">
-                    <div class="w-14 h-14 rounded-xl bg-brandRed/20 backdrop-blur-md flex items-center justify-center mb-6 border border-brandRed/30">
-                        <i class="fa-solid fa-vial-virus text-2xl text-brandRed"></i>
-                    </div>
-                    <h4 class="text-2xl font-bold text-white mb-3">Pathology Labs</h4>
-                    <p class="text-gray-400 leading-relaxed">Collection and analysis of medical samples for disease diagnosis and routine health tracking.</p>
-                </div>
-            </div>
-
-            <!-- Service 3 -->
-            <div class="relative group overflow-hidden rounded-3xl border border-white/10 h-[400px]">
-                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800" alt="Consultation" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-all duration-700 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-brandBlack via-brandBlack/80 to-transparent"></div>
-                
-                <div class="absolute bottom-0 left-0 p-8 w-full z-10 transform transition-transform duration-500">
-                    <div class="w-14 h-14 rounded-xl bg-brandRed/20 backdrop-blur-md flex items-center justify-center mb-6 border border-brandRed/30">
-                        <i class="fa-solid fa-file-medical text-2xl text-brandRed"></i>
-                    </div>
-                    <h4 class="text-2xl font-bold text-white mb-3">Report Review</h4>
-                    <p class="text-gray-400 leading-relaxed">Professional advice on understanding your medical reports and planning your next health steps.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-24 bg-brandGrey/20 border-y border-white/5 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-brandRed font-bold tracking-wider uppercase text-sm mb-2">Patient Feedback</h2>
-                <h3 class="text-3xl md:text-5xl font-bold text-white">What People Say</h3>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 relative">
-                    <i class="fa-solid fa-quote-right absolute top-6 right-8 text-4xl text-brandRed/10"></i>
-                    <div class="flex text-brandRed text-sm mb-6">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-gray-300 leading-relaxed mb-8 relative z-10">
-                        "Ms. Liza was very professional. My ECG test was done quickly, and she explained the process clearly. I felt very comfortable during my visit."
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center font-bold text-white">
-                            RK
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-white">Rajesh K.</h4>
-                            <p class="text-xs text-gray-500">Patient</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 2 -->
-                <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 relative">
-                    <i class="fa-solid fa-quote-right absolute top-6 right-8 text-4xl text-brandRed/10"></i>
-                    <div class="flex text-brandRed text-sm mb-6">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-gray-300 leading-relaxed mb-8 relative z-10">
-                        "Getting my blood tests done was easy. The lab environment is clean and her service is highly efficient. I got my reports exactly on time."
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center font-bold text-white">
-                            SM
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-white">Sunita M.</h4>
-                            <p class="text-xs text-gray-500">Patient</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 3 -->
-                <div class="glass-card p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 relative">
-                    <i class="fa-solid fa-quote-right absolute top-6 right-8 text-4xl text-brandRed/10"></i>
-                    <div class="flex text-brandRed text-sm mb-6">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-gray-300 leading-relaxed mb-8 relative z-10">
-                        "Highly recommend her for any cardiac tests. She is very polite and handles patients with great care and medical knowledge."
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center font-bold text-white">
-                            AS
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-white">Amit S.</h4>
-                            <p class="text-xs text-gray-500">Patient</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Booking Form Section -->
-    <section id="booking" class="py-24 relative">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="glass-card p-8 md:p-14 rounded-[2.5rem] border border-brandRed/20 shadow-[0_0_50px_rgba(229,9,20,0.1)] relative overflow-hidden">
-                <!-- Decorative background inside form -->
-                <div class="absolute top-0 right-0 w-64 h-64 bg-brandRed/5 rounded-full filter blur-[80px] pointer-events-none"></div>
-
-                <div class="text-center mb-12 relative z-10">
-                    <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white">Book Your <span class="text-brandRed">Appointment</span></h2>
-                    <p class="text-gray-400 text-lg">Fill out the form below. It will open WhatsApp with your details ready to send directly to Ms. Liza.</p>
-                </div>
-
-                <form id="bookingForm" onsubmit="processBooking(event)" class="space-y-6 relative z-10">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <!-- Name -->
-                        <div class="space-y-2">
-                            <label for="fullName" class="text-sm font-semibold text-gray-300 ml-1">Full Name</label>
-                            <input type="text" id="fullName" required 
-                                class="w-full bg-[#0F0F0F]/50 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder-gray-600 focus:outline-none focus:border-brandRed focus:ring-1 focus:ring-brandRed transition-all"
-                                placeholder="Enter your full name">
-                        </div>
-
-                        <!-- Phone -->
-                        <div class="space-y-2">
-                            <label for="contactNumber" class="text-sm font-semibold text-gray-300 ml-1">Contact Number</label>
-                            <input type="tel" id="contactNumber" required 
-                                class="w-full bg-[#0F0F0F]/50 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder-gray-600 focus:outline-none focus:border-brandRed focus:ring-1 focus:ring-brandRed transition-all"
-                                placeholder="Enter your mobile number">
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <!-- Service Selection -->
-                        <div class="space-y-2">
-                            <label for="serviceType" class="text-sm font-semibold text-gray-300 ml-1">Select Service</label>
-                            <select id="serviceType" required 
-                                class="w-full bg-[#0F0F0F]/50 border border-white/10 rounded-2xl px-5 py-4 text-gray-300 focus:outline-none focus:border-brandRed focus:ring-1 focus:ring-brandRed transition-all appearance-none cursor-pointer">
-                                <option value="" disabled selected>Choose a medical service</option>
-                                <option value="ECG Testing" class="text-black">ECG Testing</option>
-                                <option value="Pathology Services" class="text-black">Pathology Services</option>
-                                <option value="Report Consultation" class="text-black">Report Consultation</option>
-                                <option value="Other Query" class="text-black">Other Query</option>
-                            </select>
-                        </div>
-
-                        <!-- Preferred Date -->
-                        <div class="space-y-2">
-                            <label for="prefDate" class="text-sm font-semibold text-gray-300 ml-1">Preferred Date</label>
-                            <input type="date" id="prefDate" required 
-                                class="w-full bg-[#0F0F0F]/50 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-brandRed focus:ring-1 focus:ring-brandRed transition-all cursor-pointer">
-                        </div>
-                    </div>
-
-                    <!-- Message -->
-                    <div class="space-y-2">
-                        <label for="userMessage" class="text-sm font-semibold text-gray-300 ml-1">Additional Message (Optional)</label>
-                        <textarea id="userMessage" rows="4" 
-                            class="w-full bg-[#0F0F0F]/50 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder-gray-600 focus:outline-none focus:border-brandRed focus:ring-1 focus:ring-brandRed transition-all resize-none"
-                            placeholder="Briefly describe your symptoms or specific requirements..."></textarea>
-                    </div>
-
-                    <!-- Submit Button -->
-                    <div class="pt-6 text-center">
-                        <button type="submit" class="w-full md:w-auto bg-brandRed hover:bg-red-700 text-white px-12 py-4 rounded-full font-bold text-lg transition-all duration-300 flex items-center justify-center gap-3 mx-auto shadow-lg shadow-brandRed/30 hover:-translate-y-1">
-                            <i class="fa-brands fa-whatsapp text-2xl"></i> Send via WhatsApp
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="border-t border-white/10 pt-16 pb-8 bg-brandBlack relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-                <!-- Brand Info -->
-                <div class="space-y-4">
-                    <div class="flex items-center gap-3 mb-4">
-                        <i class="fa-solid fa-heart-pulse text-brandRed text-3xl"></i>
-                        <span class="font-bold text-2xl tracking-tight text-white">CardioWith<span class="text-brandRed">Liza</span></span>
-                    </div>
-                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
-                        Ms. Liza Ray Dakua<br>
-                        Medical Technologist<br>
-                        Jalpaiguri Medical College and Hospital
-                    </p>
-                    <div class="inline-block px-3 py-1 bg-brandRed/10 border border-brandRed/20 rounded-lg">
-                        <p class="text-brandRed font-semibold text-sm">We Care Your Heart</p>
-                    </div>
-                </div>
-
-                <!-- Quick Links -->
-                <div>
-                    <h4 class="text-white font-bold mb-6 uppercase text-sm tracking-wider">Quick Links</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#home" class="text-gray-400 hover:text-brandRed transition-colors text-sm flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs"></i> Home</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-brandRed transition-colors text-sm flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs"></i> About Me</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-brandRed transition-colors text-sm flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs"></i> Medical Services</a></li>
-                        <li><a href="#testimonials" class="text-gray-400 hover:text-brandRed transition-colors text-sm flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs"></i> Patient Reviews</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact Info -->
-                <div>
-                    <h4 class="text-white font-bold mb-6 uppercase text-sm tracking-wider">Contact Details</h4>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-location-dot text-brandRed"></i>
+                    <div class="shrink-0 w-[85vw] md:w-[380px] glow-card p-6 md:p-8 bg-[#151515]">
+                        <div class="flex items-center justify-between mb-4 md:mb-6">
+                            <div class="flex items-center gap-3 md:gap-4">
+                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brandBlack flex items-center justify-center text-sm font-bold border border-brandBorder" aria-hidden="true">SM</div>
+                                <div>
+                                    <h4 class="font-bold text-white text-xs md:text-sm">Sunita M.</h4>
+                                    <div class="flex text-brandRed text-[10px] md:text-xs mt-1" aria-label="5 stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
                             </div>
-                            <span class="text-gray-400 text-sm pt-1">Jalpaiguri Medical College and Hospital, West Bengal, India</span>
-                        </li>
-                        <li class="flex items-center gap-4">
-                            <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0">
-                                <i class="fa-brands fa-whatsapp text-brandRed text-lg"></i>
+                            <i class="fa-solid fa-quote-right text-xl md:text-3xl text-brandBorder" aria-hidden="true"></i>
+                        </div>
+                        <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
+                            "Getting my blood tests done from home was so easy. Her service is highly efficient and hygienic. I got my reports exactly on time."
+                        </p>
+                    </div>
+
+                    <div class="shrink-0 w-[85vw] md:w-[380px] glow-card p-6 md:p-8 bg-[#151515]">
+                        <div class="flex items-center justify-between mb-4 md:mb-6">
+                            <div class="flex items-center gap-3 md:gap-4">
+                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brandBlack flex items-center justify-center text-sm font-bold border border-brandBorder" aria-hidden="true">AS</div>
+                                <div>
+                                    <h4 class="font-bold text-white text-xs md:text-sm">Amit S.</h4>
+                                    <div class="flex text-brandRed text-[10px] md:text-xs mt-1" aria-label="5 stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
                             </div>
-                            <span class="text-gray-400 text-sm">+91 8514869233</span>
-                        </li>
-                    </ul>
+                            <i class="fa-solid fa-quote-right text-xl md:text-3xl text-brandBorder" aria-hidden="true"></i>
+                        </div>
+                        <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
+                            "Highly recommend her for any home cardiac tests. She is very polite and handles patients with great care and medical knowledge."
+                        </p>
+                    </div>
+
+                    <!-- Duplicated Testimonials to create seamless loop -->
+                    <div class="shrink-0 w-[85vw] md:w-[380px] glow-card p-6 md:p-8 bg-[#151515]" aria-hidden="true">
+                        <div class="flex items-center justify-between mb-4 md:mb-6">
+                            <div class="flex items-center gap-3 md:gap-4">
+                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brandBlack flex items-center justify-center text-sm font-bold border border-brandBorder">RK</div>
+                                <div>
+                                    <h4 class="font-bold text-white text-xs md:text-sm">Rajesh K.</h4>
+                                    <div class="flex text-brandRed text-[10px] md:text-xs mt-1">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-quote-right text-xl md:text-3xl text-brandBorder"></i>
+                        </div>
+                        <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
+                            "Ms. Liza was very professional. My home ECG test was done quickly, and she explained the process clearly. Very comfortable service."
+                        </p>
+                    </div>
+
+                    <div class="shrink-0 w-[85vw] md:w-[380px] glow-card p-6 md:p-8 bg-[#151515]" aria-hidden="true">
+                        <div class="flex items-center justify-between mb-4 md:mb-6">
+                            <div class="flex items-center gap-3 md:gap-4">
+                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brandBlack flex items-center justify-center text-sm font-bold border border-brandBorder">SM</div>
+                                <div>
+                                    <h4 class="font-bold text-white text-xs md:text-sm">Sunita M.</h4>
+                                    <div class="flex text-brandRed text-[10px] md:text-xs mt-1">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-quote-right text-xl md:text-3xl text-brandBorder"></i>
+                        </div>
+                        <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
+                            "Getting my blood tests done from home was so easy. Her service is highly efficient and hygienic. I got my reports exactly on time."
+                        </p>
+                    </div>
+
+                    <div class="shrink-0 w-[85vw] md:w-[380px] glow-card p-6 md:p-8 bg-[#151515]" aria-hidden="true">
+                        <div class="flex items-center justify-between mb-4 md:mb-6">
+                            <div class="flex items-center gap-3 md:gap-4">
+                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brandBlack flex items-center justify-center text-sm font-bold border border-brandBorder">AS</div>
+                                <div>
+                                    <h4 class="font-bold text-white text-xs md:text-sm">Amit S.</h4>
+                                    <div class="flex text-brandRed text-[10px] md:text-xs mt-1">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-quote-right text-xl md:text-3xl text-brandBorder"></i>
+                        </div>
+                        <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
+                            "Highly recommend her for any home cardiac tests. She is very polite and handles patients with great care and medical knowledge."
+                        </p>
+                    </div>
                 </div>
             </div>
+        </section>
+    </main>
 
-            <div class="border-t border-white/10 pt-8 text-center flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-gray-500 text-sm">
+    <!-- Minimal Modern Footer -->
+    <footer class="border-t border-brandBorder pt-12 md:pt-16 pb-6 md:pb-8 bg-[#0a0a0a]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+            
+            <h2 class="font-display font-black text-4xl sm:text-6xl md:text-[8rem] text-brandBorder mb-6 md:mb-8 leading-none tracking-tighter cursor-default hover:text-brandRed/10 transition-colors duration-500" aria-label="CardioWithLiza Logomark">
+                CARDIOWITHLIZA
+            </h2>
+
+            <nav class="flex flex-wrap justify-center gap-4 md:gap-12 mb-8 md:mb-12" aria-label="Footer Navigation">
+                <a href="#home" class="text-gray-400 hover:text-white text-xs md:text-sm uppercase tracking-widest font-medium transition-colors">Home</a>
+                <a href="#about" class="text-gray-400 hover:text-white text-xs md:text-sm uppercase tracking-widest font-medium transition-colors">About</a>
+                <a href="#services" class="text-gray-400 hover:text-white text-xs md:text-sm uppercase tracking-widest font-medium transition-colors">Services</a>
+                <button type="button" class="text-brandRed hover:text-white text-xs md:text-sm uppercase tracking-widest font-bold transition-colors btn-book-now">Book Home Test</button>
+            </nav>
+
+            <div class="w-full border-t border-brandBorder pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-600 text-xs md:text-sm">
                     &copy; 2026 CardioWithLiza. All rights reserved.
                 </p>
-                <div class="flex gap-4">
-                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brandRed transition-all"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brandRed transition-all"><i class="fa-brands fa-linkedin-in"></i></a>
+                <div class="flex gap-3 md:gap-4">
+                    <a href="https://wa.me/918514869233" target="_blank" rel="noopener noreferrer" aria-label="Contact on WhatsApp" class="w-8 h-8 md:w-10 md:h-10 rounded-full border border-brandBorder flex items-center justify-center text-gray-500 hover:text-white hover:border-brandRed transition-all text-sm md:text-base"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="mailto:contact@cardiowithliza.com" aria-label="Contact via Email" class="w-8 h-8 md:w-10 md:h-10 rounded-full border border-brandBorder flex items-center justify-center text-gray-500 hover:text-white hover:border-brandRed transition-all text-sm md:text-base"><i class="fa-solid fa-envelope"></i></a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Glowing Premium Booking Modal -->
+    <div id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="modal-title" class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-black/80 backdrop-blur-md opacity-0 transition-opacity duration-300 px-4">
+        
+        <div class="w-full max-w-2xl bg-[#0F0F0F] border border-brandBorder rounded-2xl md:rounded-3xl relative transform scale-95 transition-transform duration-300 max-h-[90vh] overflow-y-auto no-scrollbar shadow-[0_0_50px_rgba(229,9,20,0.15)]" id="modalContent">
+            
+            <!-- Close Button -->
+            <button type="button" id="closeModalBtn" aria-label="Close Modal" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-[#1A1A1A] border border-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-brandRed transition-all z-20 shadow-lg">
+                <i class="fa-solid fa-xmark text-lg" aria-hidden="true"></i>
+            </button>
+
+            <!-- Modal Content & Form -->
+            <div class="p-6 md:p-10 relative overflow-hidden">
+                <!-- Decorative Blur Element -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-brandRed rounded-full filter blur-[120px] opacity-20 pointer-events-none -z-10" aria-hidden="true"></div>
+
+                <div class="mb-8 relative z-10 border-b border-brandBorder pb-6">
+                    <h2 id="modal-title" class="font-display text-3xl md:text-4xl font-bold mb-2">Book Your <span class="text-brandRed">Home Service</span></h2>
+                    <p class="text-gray-400 text-sm">Fill out the form to secure your doorstep appointment.</p>
+                </div>
+                
+                <form id="bookingForm" onsubmit="processBooking(event)" class="relative z-10">
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+                        <div class="space-y-2">
+                            <label for="fullName" class="text-xs text-gray-400 font-medium ml-1">Full Name</label>
+                            <input type="text" id="fullName" required class="w-full bg-[#1A1A1A] border border-brandBorder rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-brandRed focus:ring-1 focus:ring-brandRed transition-all text-sm" placeholder="e.g. John Doe">
+                        </div>
+                        <div class="space-y-2">
+                            <label for="contactNumber" class="text-xs text-gray-400 font-medium ml-1">Contact Number</label>
+                            <input type="tel" id="contactNumber" required class="w-full bg-[#1A1A1A] border border-brandBorder rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-brandRed focus:ring-1 focus:ring-brandRed transition-all text-sm" placeholder="e.g. 9876543210">
+                        </div>
+                    </div>
+
+                    <div class="space-y-3 mb-5">
+                        <span class="text-xs text-gray-400 font-medium ml-1 block">Select Required Services</span>
+                        <fieldset class="grid grid-cols-1 sm:grid-cols-2 gap-3" aria-label="Select Medical Services">
+                            <!-- Custom Checkboxes -->
+                            <label class="group flex items-center gap-3 p-3.5 rounded-xl border border-brandBorder bg-[#1A1A1A] cursor-pointer hover:border-brandRed/50 transition-all has-[:checked]:border-brandRed has-[:checked]:bg-brandRed/10">
+                                <div class="relative flex items-center justify-center">
+                                    <input type="checkbox" name="service" value="ECG" class="service-checkbox appearance-none w-5 h-5 rounded border border-gray-600 bg-[#0F0F0F] checked:bg-brandRed checked:border-brandRed transition-colors cursor-pointer">
+                                    <i class="fa-solid fa-check absolute text-[10px] text-white opacity-0 pointer-events-none check-icon transition-opacity" aria-hidden="true"></i>
+                                </div>
+                                <span class="text-sm text-gray-300 font-medium group-hover:text-white transition-colors">ECG</span>
+                            </label>
+
+                            <label class="group flex items-center gap-3 p-3.5 rounded-xl border border-brandBorder bg-[#1A1A1A] cursor-pointer hover:border-brandRed/50 transition-all has-[:checked]:border-brandRed has-[:checked]:bg-brandRed/10">
+                                <div class="relative flex items-center justify-center">
+                                    <input type="checkbox" name="service" value="Holter Monitoring" class="service-checkbox appearance-none w-5 h-5 rounded border border-gray-600 bg-[#0F0F0F] checked:bg-brandRed checked:border-brandRed transition-colors cursor-pointer">
+                                    <i class="fa-solid fa-check absolute text-[10px] text-white opacity-0 pointer-events-none check-icon transition-opacity" aria-hidden="true"></i>
+                                </div>
+                                <span class="text-sm text-gray-300 font-medium group-hover:text-white transition-colors">Holter Monitoring</span>
+                            </label>
+
+                            <label class="group flex items-center gap-3 p-3.5 rounded-xl border border-brandBorder bg-[#1A1A1A] cursor-pointer hover:border-brandRed/50 transition-all has-[:checked]:border-brandRed has-[:checked]:bg-brandRed/10">
+                                <div class="relative flex items-center justify-center">
+                                    <input type="checkbox" name="service" value="Echo Cardiography" class="service-checkbox appearance-none w-5 h-5 rounded border border-gray-600 bg-[#0F0F0F] checked:bg-brandRed checked:border-brandRed transition-colors cursor-pointer">
+                                    <i class="fa-solid fa-check absolute text-[10px] text-white opacity-0 pointer-events-none check-icon transition-opacity" aria-hidden="true"></i>
+                                </div>
+                                <span class="text-sm text-gray-300 font-medium group-hover:text-white transition-colors">Echo Cardiography</span>
+                            </label>
+
+                            <label class="group flex items-center gap-3 p-3.5 rounded-xl border border-brandBorder bg-[#1A1A1A] cursor-pointer hover:border-brandRed/50 transition-all has-[:checked]:border-brandRed has-[:checked]:bg-brandRed/10">
+                                <div class="relative flex items-center justify-center">
+                                    <input type="checkbox" name="service" value="T.M.T" class="service-checkbox appearance-none w-5 h-5 rounded border border-gray-600 bg-[#0F0F0F] checked:bg-brandRed checked:border-brandRed transition-colors cursor-pointer">
+                                    <i class="fa-solid fa-check absolute text-[10px] text-white opacity-0 pointer-events-none check-icon transition-opacity" aria-hidden="true"></i>
+                                </div>
+                                <span class="text-sm text-gray-300 font-medium group-hover:text-white transition-colors">T.M.T</span>
+                            </label>
+
+                            <label class="group flex items-center gap-3 p-3.5 rounded-xl border border-brandBorder bg-[#1A1A1A] cursor-pointer hover:border-brandRed/50 transition-all has-[:checked]:border-brandRed has-[:checked]:bg-brandRed/10 sm:col-span-2">
+                                <div class="relative flex items-center justify-center">
+                                    <input type="checkbox" name="service" value="PFT" class="service-checkbox appearance-none w-5 h-5 rounded border border-gray-600 bg-[#0F0F0F] checked:bg-brandRed checked:border-brandRed transition-colors cursor-pointer">
+                                    <i class="fa-solid fa-check absolute text-[10px] text-white opacity-0 pointer-events-none check-icon transition-opacity" aria-hidden="true"></i>
+                                </div>
+                                <span class="text-sm text-gray-300 font-medium group-hover:text-white transition-colors">PFT (Pulmonary Function Tests)</span>
+                            </label>
+                        </fieldset>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-6">
+                        <div class="space-y-2">
+                            <label for="prefDate" class="text-xs text-gray-400 font-medium ml-1">Preferred Date</label>
+                            <input type="date" id="prefDate" required class="premium-date-input w-full bg-[#1A1A1A] border border-brandBorder rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-brandRed focus:ring-1 focus:ring-brandRed transition-all text-sm">
+                        </div>
+                        <div class="space-y-2">
+                            <label for="userMessage" class="text-xs text-gray-400 font-medium ml-1">Additional Note (Optional)</label>
+                            <input type="text" id="userMessage" class="w-full bg-[#1A1A1A] border border-brandBorder rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-brandRed focus:ring-1 focus:ring-brandRed transition-all text-sm" placeholder="Any specific home requirements...">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full mt-2 bg-white text-black py-4 rounded-xl text-sm font-bold hover:bg-brandRed hover:text-white transition-all duration-300 flex items-center justify-center gap-3 shadow-[0_10px_20px_rgba(255,255,255,0.1)] hover:shadow-[0_10px_30px_rgba(229,9,20,0.3)] transform hover:-translate-y-1">
+                        Confirm Booking <i class="fa-solid fa-arrow-right text-base" aria-hidden="true"></i>
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Scripts -->
     <script>
-        // Mobile Menu Toggle
+        // Favicon Heartbeat Animation Script
+        const heartPath = "M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z";
+        
+        // Generate encoded SVGs for normal and small (beating) states with proper centering
+        const frameNormal = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E50914'%3E%3Cpath d='${heartPath}'/%3E%3C/svg%3E`;
+        const frameSmall = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E50914'%3E%3Cg transform='translate(1.8, 1.8) scale(0.85)'%3E%3Cpath d='${heartPath}'/%3E%3C/g%3E%3C/svg%3E`;
+        
+        // Sequence mimics a "lub-dub" heartbeat pattern
+        const faviconSequence = [
+            frameNormal, frameSmall, 
+            frameNormal, frameSmall, 
+            frameNormal, frameNormal, frameNormal, frameNormal
+        ];
+        
+        let favIdx = 0;
+        setInterval(() => {
+            let link = document.querySelector("link[rel~='icon']");
+            if (link) {
+                // Force browser to redraw favicon by replacing the element entirely
+                const newLink = document.createElement('link');
+                newLink.rel = 'icon';
+                newLink.type = 'image/svg+xml';
+                newLink.href = faviconSequence[favIdx];
+                newLink.id = 'dynamic-favicon';
+                document.head.removeChild(link);
+                document.head.appendChild(newLink);
+            }
+            favIdx = (favIdx + 1) % faviconSequence.length;
+        }, 250); 
+
+        // DOM Elements
         const mobileBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
+        const bookingModal = document.getElementById('bookingModal');
+        const modalContent = document.getElementById('modalContent');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const bookNowButtons = document.querySelectorAll('.btn-book-now');
 
+        // Mobile Menu Toggle
         mobileBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
             mobileMenu.classList.toggle('hidden');
+            mobileBtn.setAttribute('aria-expanded', !isHidden);
         });
 
-        // Close mobile menu on link click
+        // Close Mobile Menu on Click
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
+                mobileBtn.setAttribute('aria-expanded', 'false');
             });
         });
 
-        // Booking Form processing to WhatsApp
-        function processBooking(event) {
-            event.preventDefault(); // Prevent standard form submission
+        // Dynamic Numbers for Medical Monitor Logic
+        function updateMonitorNumbers() {
+            const hrEl = document.getElementById('monitor-hr');
+            const spo2El = document.getElementById('monitor-spo2');
+            const nibpEl = document.getElementById('monitor-nibp');
 
-            // Get form values
+            if (!hrEl || !spo2El || !nibpEl) return;
+
+            // Heart Rate logic (fluctuates between 70 and 78)
+            setInterval(() => {
+                const hr = Math.floor(Math.random() * (78 - 70 + 1)) + 70;
+                hrEl.innerText = hr;
+            }, 2000);
+
+            // SpO2 logic (fluctuates between 97 and 99)
+            setInterval(() => {
+                const spo2 = Math.floor(Math.random() * (99 - 97 + 1)) + 97;
+                spo2El.innerText = spo2;
+            }, 4500);
+
+            // NIBP logic (fluctuates slightly around 120/80)
+            setInterval(() => {
+                const sys = Math.floor(Math.random() * (123 - 118 + 1)) + 118;
+                const dia = Math.floor(Math.random() * (83 - 78 + 1)) + 78;
+                nibpEl.innerText = `${sys}/${dia}`;
+            }, 8000);
+        }
+        updateMonitorNumbers();
+
+        // Realistic Custom Canvas ECG Draw Logic
+        function startECGCanvas() {
+            const canvas = document.getElementById('ecgCanvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            
+            function resize() {
+                canvas.width = canvas.parentElement.clientWidth;
+                canvas.height = canvas.parentElement.clientHeight;
+            }
+            window.addEventListener('resize', resize);
+            resize();
+
+            let w = canvas.width;
+            let h = canvas.height;
+            let x = 0;
+            let lastY = h / 2;
+            let beatTick = 0;
+            let isBeating = false;
+            let beatPhase = 0;
+            
+            function draw() {
+                w = canvas.width;
+                h = canvas.height;
+                
+                // Clear a rectangle ahead of the drawing line to simulate medical monitor scanning
+                ctx.clearRect(x, 0, 15, h);
+                
+                ctx.beginPath();
+                ctx.moveTo(x === 0 ? 0 : x - 2, lastY);
+                
+                // Baseline noise
+                let y = h / 2 + (Math.random() - 0.5) * 3; 
+                
+                // Heartbeat sequence trigger
+                beatTick++;
+                if (beatTick > 90) { // Time between beats
+                    isBeating = true;
+                    beatTick = 0;
+                    beatPhase = 0;
+                }
+                
+                // Constructing the PQRST wave shape over frames
+                if (isBeating) {
+                    if (beatPhase < 4) y -= 4; // P wave up
+                    else if (beatPhase < 7) y += 2; // P wave down
+                    else if (beatPhase < 9) y += 1; // PR segment
+                    else if (beatPhase < 11) y += 8; // Q wave down
+                    else if (beatPhase < 13) y -= 45; // R wave spike up
+                    else if (beatPhase < 16) y += 20; // S wave spike down
+                    else if (beatPhase < 20) y -= 2; // ST segment
+                    else if (beatPhase < 28) y -= 6; // T wave up
+                    else if (beatPhase < 32) y += 1; // T wave down
+                    else isBeating = false;
+                    beatPhase++;
+                }
+                
+                ctx.lineTo(x, y);
+                ctx.lineWidth = 2.5;
+                ctx.strokeStyle = '#E50914';
+                ctx.lineJoin = 'round';
+                ctx.lineCap = 'round';
+                ctx.stroke();
+                
+                lastY = y;
+                x += 2.5; // Drawing speed
+                
+                // Reset to left side
+                if (x > w) {
+                    x = 0;
+                    ctx.clearRect(0, 0, w, h);
+                }
+                
+                requestAnimationFrame(draw);
+            }
+            draw();
+        }
+        
+        // Initialize ECG canvas mapping
+        setTimeout(startECGCanvas, 100);
+
+        // Modal State Functions
+        function openModal(e) {
+            if(e) e.preventDefault();
+            bookingModal.classList.remove('hidden');
+            setTimeout(() => {
+                bookingModal.classList.remove('opacity-0');
+                modalContent.classList.remove('scale-95');
+            }, 10);
+            mobileMenu.classList.add('hidden');
+        }
+
+        function closeModal() {
+            bookingModal.classList.add('opacity-0');
+            modalContent.classList.add('scale-95');
+            setTimeout(() => {
+                bookingModal.classList.add('hidden');
+            }, 300);
+        }
+
+        // Attach Modal Listeners
+        bookNowButtons.forEach(btn => {
+            btn.addEventListener('click', openModal);
+        });
+        closeModalBtn.addEventListener('click', closeModal);
+        bookingModal.addEventListener('click', (e) => {
+            if (e.target === bookingModal) {
+                closeModal();
+            }
+        });
+
+        // Booking Form processing and redirection
+        function processBooking(event) {
+            event.preventDefault();
+
             const name = document.getElementById('fullName').value.trim();
             const phone = document.getElementById('contactNumber').value.trim();
-            const service = document.getElementById('serviceType').value;
             const date = document.getElementById('prefDate').value;
             const message = document.getElementById('userMessage').value.trim();
+            
+            // Gather all checked services
+            const checkedBoxes = document.querySelectorAll('.service-checkbox:checked');
+            let services = [];
+            checkedBoxes.forEach(box => {
+                services.push(box.value);
+            });
 
-            // Format the message for WhatsApp
-            let waText = `Hello Ms. Liza,\nI would like to book a medical appointment.\n\n`;
+            const serviceText = services.length > 0 ? services.join(', ') : 'General Home Consultation';
+
+            let waText = `Hello CardioWithLiza,\nI would like to book a home medical appointment.\n\n`;
             waText += `*Patient Details:*\n`;
             waText += `- Name: ${name}\n`;
             waText += `- Phone: ${phone}\n`;
-            waText += `- Service: ${service}\n`;
-            waText += `- Date: ${date}\n`;
+            waText += `- Services Required: ${serviceText}\n`;
+            waText += `- Preferred Date: ${date}\n`;
             
             if (message) {
                 waText += `\n*Additional Note:*\n${message}`;
             }
 
-            // Encode the text for URL
             const encodedText = encodeURIComponent(waText);
-
-            // Updated destination WhatsApp number
             const destWhatsAppNumber = "918514869233"; 
-
-            // Create the WhatsApp link
             const whatsappUrl = `https://wa.me/${destWhatsAppNumber}?text=${encodedText}`;
 
-            // Open WhatsApp in a new tab
-            window.open(whatsappUrl, '_blank');
-            
-            // Optional: reset form after sending
+            window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
             document.getElementById('bookingForm').reset();
+            closeModal();
         }
     </script>
 </body>
